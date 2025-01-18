@@ -1,0 +1,26 @@
+footer {
+    background-color: $black1;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .socialnetworks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 100px;
+
+
+        i {
+            font-size: 1.3rem;
+        }
+
+
+    }
+
+    a,
+    a:visited {
+        color: $white1;
+    }
+
+}

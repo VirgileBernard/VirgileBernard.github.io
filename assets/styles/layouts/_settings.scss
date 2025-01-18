@@ -1,0 +1,169 @@
+// font-family: "inter-bold";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// font-family: 'Montserrat';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// font-family:"Confortaa";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+
+
+$font1: "inter", serif;
+$font3: "Montserrat", serif;
+
+$black1: rgb(17, 17, 17);
+$white1: rgb(243, 243, 243);
+$white2: rgba(255, 255, 255, 0.80);
+$purple1 : rgb(115, 78, 225);
+$purple2 : #3c00ff82;
+
+
+@mixin title {
+    font-family: $font3;
+    // tous les titres avec le blanc profond
+    color: $white1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: $font3;
+    text-align: left;
+}
+
+@mixin p {
+    font-family: $font3;
+    color: $white2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+
+
+}
+
+body {
+    background: linear-gradient(to left, #000000eb, #000000d1);
+
+}
+
+nav {
+    color: $white1;
+}
+
+header {
+    color: $white1;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    padding: 2em 4em;
+    font-weight: 600;
+    background-color: $purple1;
+    border: 1px solid $purple1;
+    border-radius: 1000px;
+    font-family: $font1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s ease;
+    margin-bottom: 100px;
+
+    a {
+        color: $white1;
+    }
+}
+
+.btn:hover {
+    background-color: $black1 ;
+
+}
+
+// animation photo et texte header
+@keyframes opacity {
+    from {
+        opacity: 0;
+        scale: 0.75;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+// animation texte bottom header
+@keyframes slideRight {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+// animation nav header
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+// animation span
+@keyframes wiggle {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+}
+
+// animation cards
+@keyframes cards {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
