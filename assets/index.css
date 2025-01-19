@@ -1,6 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,34 +25,86 @@ body {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9215686275), rgba(0, 0, 0, 0.8196078431));
 }
 
-nav {
-  color: rgb(243, 243, 243);
-}
-
 header {
   color: rgb(243, 243, 243);
 }
 
+nav {
+  color: rgb(243, 243, 243);
+}
+
+.navHeader {
+  position: relative;
+  font-family: "inter", serif;
+  width: 60%;
+  height: 50px;
+  margin: 2vh auto 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.navHeader a {
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  color: rgb(243, 243, 243);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.navHeader span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 33%;
+  background: linear-gradient(85deg, rgba(115, 78, 225, 0.655), rgb(115, 78, 225));
+  border-radius: 8px;
+  transition: 0.5s;
+}
+.navHeader a:nth-child(1):hover ~ span {
+  left: 0;
+}
+.navHeader a:nth-child(2):hover ~ span {
+  left: 33%;
+}
+.navHeader a:nth-child(3):hover ~ span {
+  left: 67%;
+}
+
 .btn {
   display: block;
+  /* Le bouton occupe une ligne entière */
   margin: 0 auto;
+  /* Centre horizontalement */
+  width: -moz-max-content;
+  width: max-content;
+  /* Évite que le bouton prenne toute la largeur */
   padding: 2em 4em;
-  font-weight: 600;
+  font-weight: 700;
   background-color: rgb(115, 78, 225);
   border: 1px solid rgb(115, 78, 225);
   border-radius: 1000px;
   font-family: "inter", serif;
   text-transform: uppercase;
+  color: rgb(243, 243, 243);
+  text-align: center;
+  text-decoration: none;
+  /* Supprime le soulignement */
   cursor: pointer;
   transition: 0.5s ease;
   margin-bottom: 100px;
 }
-.btn a {
-  color: rgb(243, 243, 243);
-}
-
 .btn:hover {
-  background-color: rgb(17, 17, 17);
+  background-color: rgba(115, 78, 225, 0.655);
+  border: 1px solid rgba(115, 78, 225, 0.655);
 }
 
 @keyframes opacity {
@@ -112,49 +164,6 @@ body .headerIndex {
   height: 100vh;
   text-transform: capitalize;
 }
-body .headerIndex .navHeader {
-  position: relative;
-  font-family: "inter", serif;
-  width: 60%;
-  height: 50px;
-  margin: 2vh auto 0;
-  background: #222;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-}
-body .headerIndex .navHeader a {
-  position: relative;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 500;
-  color: rgb(243, 243, 243);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-body .headerIndex .navHeader span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 33%;
-  background: linear-gradient(85deg, rgba(60, 0, 255, 0.5098039216), rgb(115, 78, 225));
-  border-radius: 8px;
-  transition: 0.5s;
-}
-body .headerIndex .navHeader a:nth-child(1):hover ~ span {
-  left: 0;
-}
-body .headerIndex .navHeader a:nth-child(2):hover ~ span {
-  left: 33%;
-}
-body .headerIndex .navHeader a:nth-child(3):hover ~ span {
-  left: 66%;
-}
 body .headerIndex .TopHeader {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -205,6 +214,18 @@ body .headerIndex .BottomHeader span {
   margin: 100px auto 300px;
   animation: wiggle 1s ease-out 1s infinite;
   opacity: 0;
+}
+body .headerIndex .BottomHeader i {
+  color: rgb(243, 243, 243);
+}
+
+#myProjects::before {
+  content: "";
+  display: block;
+  height: 20px;
+  /* Ajuste la hauteur selon tes besoins */
+  margin-top: 0px;
+  /* Compense la hauteur pour que l'ancre ne change pas la position réelle */
 }
 
 .mesProjets {
@@ -311,7 +332,7 @@ body .headerIndex .BottomHeader span {
   display: grid;
   grid-template-columns: 60% 40%;
   gap: 5%;
-  margin-bottom: 100px;
+  margin-bottom: 5vh;
 }
 @media screen and (min-width: 720px) {
   .mesProjets .projetContainer2 {
@@ -363,8 +384,8 @@ body .headerIndex .BottomHeader span {
   line-height: 2.5rem;
   max-width: 100%;
   margin: 0 auto;
+  margin-bottom: 10vh;
   font-size: 1rem;
-  margin-bottom: 4%;
   text-align: center;
 }
 @media screen and (min-width: 720px) {
@@ -418,61 +439,16 @@ body .headerIndex .BottomHeader span {
   }
 }
 
-body .navHeader {
-  position: relative;
-  font-family: "inter", serif;
-  width: 60%;
-  height: 50px;
-  margin: 1rem auto 3rem;
-  background: #222;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-}
-body .navHeader a {
-  position: relative;
-  display: inline-block;
-  font-size: 1em;
-  font-weight: 500;
-  color: rgb(243, 243, 243);
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-}
-body .navHeader span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 33%;
-  background: linear-gradient(85deg, rgba(60, 0, 255, 0.5098039216), rgb(115, 78, 225));
-  border-radius: 8px;
-  transition: 0.5s;
-}
-body .navHeader a:nth-child(1):hover ~ span {
-  left: 0;
-}
-body .navHeader a:nth-child(2):hover ~ span {
-  left: 33%;
-}
-body .navHeader a:nth-child(3):hover ~ span {
-  left: 66%;
-}
-
 body .cardContainer {
   background: linear-gradient(85deg, rgba(11, 4, 4, 0.3647058824), rgb(115, 78, 225));
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   box-shadow: 0px 5px 32px 0 rgba(76, 17, 122, 0.463);
-  border: 1px solid rgb(243, 243, 243);
   border-radius: 50px;
   max-width: 80vw;
   min-height: 85vh;
-  margin: 0 auto;
-  margin-bottom: 3vh;
+  padding: 1%;
+  margin: 5vh auto;
 }
 body .cardContainer .cardLeft {
   max-width: 80vw;
@@ -514,6 +490,7 @@ body .cardContainer .cardLeft .topLeft .txtHeader {
   font-weight: 800;
   text-align: center;
   color: rgb(243, 243, 243);
+  max-width: 100%;
 }
 body .cardContainer .cardLeft .topLeft .txtHeader h1 {
   margin-bottom: 1rem;
@@ -607,6 +584,7 @@ body .cardContainer .cardRight form .submitContainer {
 footer {
   background-color: rgb(17, 17, 17);
   min-height: 10vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

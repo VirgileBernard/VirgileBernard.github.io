@@ -1,6 +1,7 @@
 footer {
     background-color: $black1;
     min-height: 10vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,11 +11,9 @@ footer {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 100px;
 
-
         i {
             font-size: 1.3rem;
         }
-
 
     }
 

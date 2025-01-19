@@ -1,3 +1,16 @@
+// espace vide au dessus des projets au clique sur l'icone du header
+
+#myProjects {
+    &::before {
+        content: "";
+        display: block;
+        height: 20px;
+        /* Ajuste la hauteur selon tes besoins */
+        margin-top: 0px;
+        /* Compense la hauteur pour que l'ancre ne change pas la position réelle */
+    }
+}
+
 .mesProjets {
 
     @media screen and (max-width: 720px) {
@@ -109,7 +122,7 @@
         display: grid;
         grid-template-columns: 60% 40%;
         gap: 5%;
-        margin-bottom: 100px;
+        margin-bottom: 5vh;
 
         @media screen and (min-width: 720px) {
             // réglages pour tablettes
@@ -164,9 +177,10 @@
         line-height: 2.5rem;
         max-width: 100%;
         margin: 0 auto;
+        margin-bottom: 10vh;
         font-size: 1rem;
-        margin-bottom: 4%;
         text-align: center;
+
 
 
         @media screen and (min-width: 720px) {
@@ -250,61 +264,7 @@
 
 }
 
-//¨***********************************STYLE DE PROJET.HTML//////////////////////////////
 
-body {
-
-    .navHeader {
-        position: relative;
-        font-family: $font1;
-        width: 60%;
-        height: 50px;
-        margin: 1rem auto 3rem;
-        background: #222;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-
-        a {
-            position: relative;
-            display: inline-block;
-            font-size: 1em;
-            font-weight: 500;
-            color: $white1;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            // pr que le a prenne 100% de sa taille  
-            height: 100%;
-            width: 100%;
-        }
-
-        span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 33%;
-            background: linear-gradient(85deg, #3c00ff82, $purple1);
-            border-radius: 8px;
-            transition: .5s;
-        }
-
-        a:nth-child(1):hover~span {
-            left: 0;
-        }
-
-        a:nth-child(2):hover~span {
-            left: 33%;
-        }
-
-        a:nth-child(3):hover~span {
-            left: 66%;
-        }
-    }
-}
 
 ////////******************* STYLE DE CONTACT.HTML ********************************************
 
@@ -315,12 +275,11 @@ body {
         backdrop-filter: blur(0px);
         -webkit-backdrop-filter: blur(0px);
         box-shadow: 0px 5px 32px 0 rgba(76, 17, 122, 0.463);
-        border: 1px solid $white1;
         border-radius: 50px;
         max-width: 80vw;
         min-height: 85vh;
-        margin: 0 auto;
-        margin-bottom: 3vh;
+        padding: 1%;
+        margin: 5vh auto;
 
 
 
@@ -370,6 +329,7 @@ body {
                     font-weight: 800;
                     text-align: center;
                     color: $white1;
+                    max-width: 100%;
 
                     h1 {
                         margin-bottom: 1rem;

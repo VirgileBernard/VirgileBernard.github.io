@@ -4,9 +4,6 @@
 // font-family: 'Montserrat';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-// font-family:"Confortaa";
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-
 
 
 
@@ -14,10 +11,10 @@ $font1: "inter", serif;
 $font3: "Montserrat", serif;
 
 $black1: rgb(17, 17, 17);
-$white1: rgb(243, 243, 243);
+$white1: rgb(243, 243, 243, 1);
 $white2: rgba(255, 255, 255, 0.80);
 $purple1 : rgb(115, 78, 225);
-$purple2 : #3c00ff82;
+$purple2 : rgba(115, 78, 225, 0.655);
 
 
 @mixin title {
@@ -65,37 +62,99 @@ body {
 
 }
 
-nav {
-    color: $white1;
-}
-
 header {
     color: $white1;
 }
 
+nav {
+    color: $white1;
+}
+
+.navHeader {
+    position: relative;
+    font-family: $font1;
+    width: 60%;
+    height: 50px;
+    margin: 2vh auto 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.300);
+    backdrop-filter: blur(10px);
+
+    a {
+        position: relative;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 500;
+        color: $white1;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        // Pour que le a prenne 100% de la taille de la case
+        height: 100%;
+        width: 100%;
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 33%;
+        background: linear-gradient(85deg, $purple2, $purple1);
+        border-radius: 8px;
+        transition: .5s;
+    }
+
+    a:nth-child(1):hover~span {
+        left: 0;
+    }
+
+    a:nth-child(2):hover~span {
+        left: 33%;
+    }
+
+    a:nth-child(3):hover~span {
+        left: 67%;
+    }
+}
+
+
+
+
+
 .btn {
     display: block;
+    /* Le bouton occupe une ligne entière */
     margin: 0 auto;
+    /* Centre horizontalement */
+    width: max-content;
+    /* Évite que le bouton prenne toute la largeur */
     padding: 2em 4em;
-    font-weight: 600;
+    font-weight: 700;
     background-color: $purple1;
     border: 1px solid $purple1;
     border-radius: 1000px;
     font-family: $font1;
     text-transform: uppercase;
+    color: $white1;
+    text-align: center;
+    text-decoration: none;
+    /* Supprime le soulignement */
     cursor: pointer;
-    transition: .5s ease;
+    transition: 0.5s ease;
     margin-bottom: 100px;
 
-    a {
-        color: $white1;
+    &:hover {
+        background-color: $purple2;
+        border: 1px solid $purple2;
     }
 }
 
-.btn:hover {
-    background-color: $black1 ;
-
-}
 
 // animation photo et texte header
 @keyframes opacity {
