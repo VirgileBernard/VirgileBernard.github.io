@@ -557,7 +557,8 @@ body .cardContainer .cardRight h2 {
   font-weight: 800;
   margin-bottom: 1rem;
 }
-body .cardContainer .cardRight form input {
+body .cardContainer .cardRight form input,
+body .cardContainer .cardRight form textarea {
   display: block;
   margin: 0 auto;
   width: 85%;
@@ -569,11 +570,13 @@ body .cardContainer .cardRight form input {
   color: rgb(243, 243, 243);
   font-family: "Montserrat", serif;
 }
-body .cardContainer .cardRight form input:focus {
+body .cardContainer .cardRight form input:focus,
+body .cardContainer .cardRight form textarea:focus {
   border: 2px solid rgb(115, 78, 225);
 }
 body .cardContainer .cardRight form #message {
   height: 100px;
+  color: rgb(17, 17, 17);
 }
 body .cardContainer .cardRight form .submitContainer {
   width: 50%;

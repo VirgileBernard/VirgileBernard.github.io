@@ -234,34 +234,6 @@
         }
     }
 
-    // .btn {
-    //     display: block;
-
-    //     margin: 0 auto;
-    //     padding: 2em 4em;
-    //     font-weight: 600;
-    //     background-color: $purple1;
-    //     border: 1px solid $purple1;
-    //     border-radius: 1000px;
-    //     font-family: $font1;
-    //     text-transform: uppercase;
-    //     cursor: pointer;
-    //     transition: .5s ease;
-    //     margin-bottom: 100px;
-
-    //     a {
-    //         color: $white1;
-    //         height: 100%;
-    //         width: 100%;
-    //     }
-
-    // }
-
-    // .btn:hover {
-    //     background-color: $black1 ;
-
-    // }
-
 }
 
 
@@ -425,8 +397,8 @@ body {
 
             form {
 
-
-                input {
+                input,
+                textarea {
                     display: block;
                     margin: 0 auto;
                     width: 85%;
@@ -439,15 +411,14 @@ body {
                     font-family: $font3;
                 }
 
-                input:focus {
+                input:focus,
+                textarea:focus {
                     border: 2px solid rgb(115, 78, 225);
                 }
 
-
-
                 #message {
                     height: 100px;
-
+                    color: $black1;
                 }
 
                 .submitContainer {
