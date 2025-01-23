@@ -1,15 +1,22 @@
 footer {
     background-color: $black1;
     min-height: 10vh;
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .socialnetworks {
+        max-width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 100px;
+
+        @media screen and (max-width: 720px) {
+            // réglages pour téléphone
+            column-gap: 30px;
+
+        }
 
         i {
             font-size: 1.3rem;

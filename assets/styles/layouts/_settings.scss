@@ -1,4 +1,10 @@
+// **settings**
+
+
+
 // font-family: "inter-bold";
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 // font-family: 'Montserrat';
@@ -11,10 +17,11 @@ $font1: "inter", serif;
 $font3: "Montserrat", serif;
 
 $black1: rgb(17, 17, 17);
-$white1: rgb(243, 243, 243, 1);
-$white2: rgba(255, 255, 255, 0.80);
+$white1: rgb(243, 243, 243);
+$white2: rgb(255, 255, 255);
 $purple1 : rgb(115, 78, 225);
 $purple2 : rgba(115, 78, 225, 0.655);
+$deepBlue : #001C64;
 
 
 @mixin title {
@@ -51,8 +58,9 @@ li {
 }
 
 a,
-a:visited {
+.aTxt {
     text-decoration: none;
+    color: $white1;
 
 
 }
@@ -105,7 +113,7 @@ nav {
         left: 0;
         height: 100%;
         width: 33%;
-        background: linear-gradient(85deg, $purple2, $purple1);
+        background-color: #001C64;
         border-radius: 8px;
         transition: .5s;
     }
@@ -125,35 +133,47 @@ nav {
 }
 
 
-
-
-
 .btn {
-    display: block;
-    /* Le bouton occupe une ligne entière */
-    margin: 0 auto;
-    /* Centre horizontalement */
-    width: max-content;
-    /* Évite que le bouton prenne toute la largeur */
-    padding: 2em 4em;
-    font-weight: 700;
-    background-color: $purple1;
-    border: 1px solid $purple1;
-    border-radius: 1000px;
-    font-family: $font1;
-    text-transform: uppercase;
-    color: $white1;
+    display: inline-block;
     text-align: center;
+    padding: 1em 2em;
+    font-weight: 700;
+    background-color: #E1E1E1;
+    border: 1px solid $black1;
+    border-radius: 8px;
+    font-family: $font1;
+    text-transform: capitalize;
+    color: #001C64;
     text-decoration: none;
-    /* Supprime le soulignement */
     cursor: pointer;
     transition: 0.5s ease;
-    margin-bottom: 100px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5vh;
+    width: 200px;
+
 
     &:hover {
-        background-color: $purple2;
-        border: 1px solid $purple2;
+        background-color: #001C64;
+        color: #E1E1E1;
+        border: 1px solid $black1;
     }
+}
+
+.btnContactContainer {
+    text-align: center;
+}
+
+
+
+
+
+.strong {
+    font-weight: bolder;
+}
+
+
+textarea {
+    resize: none;
 }
 
 

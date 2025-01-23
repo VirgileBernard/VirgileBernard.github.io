@@ -1,0 +1,804 @@
+//******** MEDIAS QUERIES DEKSTOP
+@media screen and (min-width: 1101px) {
+    body {
+
+        .cardContainer {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            background-color: #515151;
+            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+            border-radius: 16px;
+            max-width: 85vw;
+            margin: 5vh auto 5vh;
+            min-height: 80vh;
+
+            .cardLeft {
+                display: grid;
+                grid-template-rows: 60% 40%;
+
+
+
+
+                .topLeft {
+                    display: grid;
+                    grid-template-columns: 40% 60%;
+
+
+
+                    @media screen and (min-width: 720px) {
+                        // réglages pour téléphone
+
+                    }
+
+                    .imgHeader {
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        @media screen and (min-width: 720px) {}
+
+                        #pp {
+                            border-radius: 8px;
+                            max-height: 200px;
+                        }
+                    }
+
+                    .txtHeader {
+                        display: grid;
+                        grid-template-rows: 35% 65%;
+                        align-items: center;
+                        // justify-content: center;
+                        @include p;
+                        font-size: .8rem;
+                        margin-top: 5vh;
+
+
+
+                        .txtHeaderTop {
+                            text-align: left;
+                            font-size: 1.5rem;
+                        }
+
+                        .txtHeaderBottom {
+                            margin-top: -13vh;
+                            font-size: 1rem;
+
+
+                            ul {
+
+
+                                li {
+                                    display: flex;
+                                    gap: 5%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .bottomLeft {
+                    text-align: center;
+                    display: grid;
+                    justify-content: center;
+
+
+
+
+
+
+                    .txtInfos {
+                        h2 {
+                            @include title;
+                            letter-spacing: 0px;
+                            text-transform: none;
+                            font-weight: 500;
+                            margin: 1rem 0 3rem;
+                            font-size: 1.5rem;
+                            max-width: 80%;
+                            text-align: center;
+                            margin: 0 auto 5vh;
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .cardRight {
+            display: grid;
+            margin: auto 0 auto;
+            grid-template-rows: 30% 70%;
+            // align-items: end;
+            height: 80%;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            @include title;
+            letter-spacing: 0px;
+            text-transform: none;
+            font-weight: 700;
+            margin: 0 auto 0;
+            font-size: 1.8rem;
+            font-family: $font3;
+            text-align: center;
+        }
+
+
+
+    }
+
+
+
+    form {
+        margin: auto;
+
+
+        .infosForm {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            justify-content: center;
+
+        }
+
+
+        input,
+        textarea {
+            box-shadow: 0px 8px 8px rgb(0, 0, 0, 0.5);
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            width: 85%;
+            padding: .5rem;
+            margin-bottom: 1rem;
+            outline: none;
+            border: 1px solid $black1;
+            color: $black1;
+            font-family: $font3;
+        }
+
+        input:focus,
+        textarea:focus {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        #message {
+            height: 200px;
+
+        }
+
+        .actionForm {
+            input[type=submit].btn-submit {
+                all: unset;
+                /* Supprimer tous les styles par défaut */
+                display: block;
+                margin: 5% auto;
+                padding: 1em 2em;
+                font-weight: 700;
+                background-color: #E1E1E1;
+                border: 1px solid $black1;
+                border-radius: 8px;
+                font-family: $font1;
+                text-transform: capitalize;
+                color: #001C64;
+                cursor: pointer;
+                text-align: center;
+                transition: 0.5s ease;
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+                &:hover {
+                    background-color: #001C64;
+                    color: #E1E1E1;
+                    border: 1px solid $black1;
+                }
+            }
+        }
+    }
+}
+
+// // ***MEDIAS QUERIES TABLETTES
+@media screen and (min-width: 851px) and (max-width: 1100px) {
+    body {
+
+        .cardContainer {
+            display: grid;
+            grid-template-columns: 60% 40%;
+            background-color: #515151;
+            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+            border-radius: 16px;
+            max-width: 85vw;
+            margin: 5vh auto 5vh;
+            min-height: 80vh;
+
+            .cardLeft {
+                display: grid;
+                grid-template-rows: 60% 40%;
+
+
+
+
+                .topLeft {
+                    display: grid;
+                    grid-template-columns: 50% 50%;
+
+
+
+                    @media screen and (min-width: 720px) {
+                        // réglages pour téléphone
+
+                    }
+
+                    .imgHeader {
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+
+
+                        @media screen and (min-width: 720px) {}
+
+                        #pp {
+                            border-radius: 8px;
+                            max-height: 200px;
+                        }
+                    }
+
+                    .txtHeader {
+                        display: grid;
+                        grid-template-rows: 35% 65%;
+                        align-items: center;
+                        justify-content: center;
+                        @include p;
+                        font-size: .8rem;
+                        margin-top: 3vh;
+
+
+
+
+                        .txtHeaderTop {
+                            text-align: left;
+                            font-size: 1rem;
+
+                            h1 {
+                                font-weight: 600;
+                            }
+                        }
+
+                        .txtHeaderBottom {
+                            margin-top: -13vh;
+
+
+
+                            ul {
+
+
+                                li {}
+                            }
+                        }
+                    }
+                }
+
+
+                .bottomLeft {
+                    text-align: center;
+                    display: grid;
+                    justify-content: center;
+
+
+
+
+
+
+                    .txtInfos {
+                        h2 {
+                            @include title;
+                            letter-spacing: 0px;
+                            text-transform: none;
+                            font-weight: 500;
+                            margin: 1rem 0 3rem;
+                            font-size: 1rem;
+                            max-width: 80%;
+                            text-align: center;
+                            margin: 0 auto 5vh;
+                            font-weight: 500;
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .cardRight {
+            display: grid;
+            margin: auto;
+            grid-template-rows: 30% 70%;
+            height: 80%;
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            @include title;
+            letter-spacing: 0px;
+            text-transform: none;
+            font-weight: 500;
+            margin: 0 auto 0;
+            font-size: 1.5rem;
+            font-family: $font3;
+            text-align: center;
+        }
+
+
+
+    }
+
+
+
+    form {
+        .infosForm {}
+
+
+        input,
+        textarea {
+            box-shadow: 0px 8px 8px rgb(0, 0, 0, 0.5);
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            width: 85%;
+            padding: .5rem;
+            margin-bottom: 1rem;
+            outline: none;
+            border: 1px solid $black1;
+            color: $black1;
+            font-family: $font3;
+        }
+
+        input:focus,
+        textarea:focus {
+            border: 1px solid rgb(0, 0, 0);
+        }
+
+        #message {
+            height: 100px;
+            margin-bottom: 5vh;
+        }
+
+        .actionForm {
+            input[type=submit].btn-submit {
+                all: unset;
+                /* Supprimer tous les styles par défaut */
+                display: block;
+                margin: 5% auto;
+                padding: 1em 2em;
+                font-weight: 700;
+                background-color: #E1E1E1;
+                border: 1px solid $black1;
+                border-radius: 8px;
+                font-family: $font1;
+                text-transform: capitalize;
+                color: #001C64;
+                cursor: pointer;
+                text-align: center;
+                transition: 0.5s ease;
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+                &:hover {
+                    background-color: #001C64;
+                    color: #E1E1E1;
+                    border: 1px solid $black1;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+// *****MEDIAS QUERIES PHONE
+
+@media screen and (min-width: 501px) and (max-width: 850px) {
+
+
+    body {
+
+        .cardContainer {
+            display: grid;
+            grid-template-rows: 50% 50%;
+            margin: 5vh auto;
+            max-width: 90vw;
+            background-color: #515151;
+            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+            border-radius: 16px;
+
+
+
+            .cardLeft {
+                padding: 5%;
+                margin-bottom: 3%;
+
+
+
+                .topLeft {
+                    display: grid;
+                    grid-template-columns: 40% 60%;
+
+                    .imgHeader {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        @media screen and (min-width: 720px) {}
+
+                        #pp {
+                            border-radius: 8px;
+                            max-height: 200px;
+                        }
+                    }
+
+                    .txtHeader {
+                        display: grid;
+                        grid-template-rows: 20% 80%;
+                        row-gap: 2rem;
+                        margin: auto auto auto;
+                        @include p;
+
+
+                        .txtHeaderTop {
+                            text-align: center;
+                            line-height: 1.5rem;
+
+                        }
+
+                        .txtHeaderBottom {
+
+                            min-height: 100%;
+
+
+
+                            ul {
+                                min-width: 250px;
+
+
+                                li {
+
+                                    display: flex;
+                                    gap: 5%;
+                                    font-size: .65rem;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .bottomLeft {
+                    text-align: center;
+
+
+                    .txtInfos {
+                        h2 {
+                            @include title;
+                            letter-spacing: 0px;
+                            text-transform: none;
+                            font-weight: 500;
+                            margin: 1rem 0 1rem;
+                            font-size: 1.5rem;
+                            text-align: center;
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .cardRight {
+            display: grid;
+            margin: auto 0 auto;
+            grid-template-rows: 15% 85%;
+            max-height: 50vh;
+
+
+
+            h2 {
+                @include title;
+                letter-spacing: 0px;
+                text-transform: none;
+                font-weight: 500;
+                margin: 0 auto 0;
+                font-size: 1.5rem;
+                font-family: $font3;
+                text-align: center;
+                margin-bottom: 10vh;
+            }
+
+
+
+        }
+
+
+
+        form {
+            .infosForm {
+                display: grid;
+                grid-template-columns: 45% 45%;
+                justify-content: center;
+            }
+
+
+            input,
+            textarea {
+                box-shadow: 0px 8px 8px rgb(0, 0, 0, 0.5);
+                border-radius: 8px;
+                display: block;
+                margin: 0 auto;
+                width: 85%;
+                padding: .5rem;
+                margin-bottom: 1rem;
+                outline: none;
+                border: 1px solid $black1;
+                color: $black1;
+                font-family: $font3;
+            }
+
+            input:focus,
+            textarea:focus {
+                border: 1px solid rgb(0, 0, 0);
+            }
+
+            #message {
+                height: 100px;
+
+            }
+
+            .actionForm {
+                text-align: center;
+                margin-bottom: -10vh;
+
+                input[type=submit].btn-submit {
+                    all: unset;
+                    /* Supprimer tous les styles par défaut */
+                    display: block;
+                    margin: 5% auto;
+                    padding: 1em 2em;
+                    font-weight: 700;
+                    background-color: #E1E1E1;
+                    border: 1px solid $black1;
+                    border-radius: 8px;
+                    font-family: $font1;
+                    text-transform: capitalize;
+                    color: #001C64;
+                    cursor: pointer;
+                    text-align: center;
+                    transition: 0.5s ease;
+                    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+                    &:hover {
+                        background-color: #001C64;
+                        color: #E1E1E1;
+                        border: 1px solid $black1;
+                    }
+                }
+
+
+            }
+        }
+
+
+
+
+    }
+}
+
+
+//**********MEDIAS QUERIES SMALL PHONE 
+
+@media screen and (max-width: 500px) {
+
+
+    body {
+
+        .cardContainer {
+            display: grid;
+            grid-template-rows: 50% 50%;
+            margin: 5vh auto;
+            max-width: 90vw;
+            background-color: #515151;
+            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+            border-radius: 16px;
+
+
+
+            .cardLeft {
+                // padding: 5%;
+                margin-bottom: 3%;
+
+
+
+                .topLeft {
+                    padding: 5%;
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+
+
+                    .imgHeader {
+                        display: flex;
+                        margin-top: 5vh;
+                        // justify-content: center;
+                        align-items: center;
+
+
+                        #pp {
+                            border-radius: 8px;
+                            max-height: 20vh;
+                        }
+                    }
+
+                    .txtHeader {
+                        display: grid;
+                        grid-template-rows: 20% 80%;
+                        row-gap: 1rem;
+                        margin: auto auto auto;
+                        @include p;
+                        font-size: .9rem;
+
+
+                        .txtHeaderTop {
+                            text-align: left;
+                            line-height: 1.5rem;
+
+
+                        }
+
+                        .txtHeaderBottom {
+
+                            min-height: 100%;
+
+
+
+                            ul {
+                                min-width: 250px;
+
+
+                                li {
+
+                                    font-size: .65rem;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .bottomLeft {
+                    text-align: center;
+
+
+                    .txtInfos {
+                        h2 {
+                            @include title;
+                            letter-spacing: 0px;
+                            text-transform: none;
+                            font-weight: 500;
+                            margin: 1rem auto 1rem;
+                            font-size: .8rem;
+                            text-align: center;
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .cardRight {
+            display: grid;
+            margin: auto 0 auto;
+            grid-template-rows: 15% 85%;
+            max-height: 50vh;
+
+
+
+            h2 {
+                @include title;
+                letter-spacing: 0px;
+                text-transform: none;
+                font-weight: 500;
+                margin: 0 auto 0;
+                font-size: 1.5rem;
+                font-family: $font3;
+                text-align: center;
+                margin-bottom: 10vh;
+            }
+
+
+
+        }
+
+
+
+        form {
+            .infosForm {
+                max-width: 100%;
+                overflow: hidden;
+            }
+
+
+            input,
+            textarea {
+                box-shadow: 0px 8px 8px rgb(0, 0, 0, 0.5);
+                border-radius: 8px;
+                display: block;
+                margin: 0 auto;
+                width: 85%;
+                padding: .5rem;
+                margin-bottom: 1rem;
+                outline: none;
+                border: 1px solid $black1;
+                color: $black1;
+                font-family: $font3;
+            }
+
+            input:focus,
+            textarea:focus {
+                border: 1px solid rgb(0, 0, 0);
+            }
+
+            #message {
+                height: 100px;
+
+            }
+
+            .actionForm {
+                text-align: center;
+                margin-bottom: -10vh;
+
+                input[type=submit].btn-submit {
+                    all: unset;
+                    /* Supprimer tous les styles par défaut */
+                    display: block;
+                    margin: 5% auto;
+                    padding: 1em 2em;
+                    font-weight: 700;
+                    background-color: #E1E1E1;
+                    border: 1px solid $black1;
+                    border-radius: 8px;
+                    font-family: $font1;
+                    text-transform: capitalize;
+                    color: #001C64;
+                    cursor: pointer;
+                    text-align: center;
+                    transition: 0.5s ease;
+                    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+                    &:hover {
+                        background-color: #001C64;
+                        color: #E1E1E1;
+                        border: 1px solid $black1;
+                    }
+                }
+
+
+            }
+        }
+
+
+
+
+    }
+}

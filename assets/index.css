@@ -17,8 +17,9 @@ li {
 }
 
 a,
-a:visited {
+.aTxt {
   text-decoration: none;
+  color: rgb(243, 243, 243);
 }
 
 body {
@@ -65,7 +66,7 @@ nav {
   left: 0;
   height: 100%;
   width: 33%;
-  background: linear-gradient(85deg, rgba(115, 78, 225, 0.655), rgb(115, 78, 225));
+  background-color: #001C64;
   border-radius: 8px;
   transition: 0.5s;
 }
@@ -80,31 +81,39 @@ nav {
 }
 
 .btn {
-  display: block;
-  /* Le bouton occupe une ligne entière */
-  margin: 0 auto;
-  /* Centre horizontalement */
-  width: -moz-max-content;
-  width: max-content;
-  /* Évite que le bouton prenne toute la largeur */
-  padding: 2em 4em;
-  font-weight: 700;
-  background-color: rgb(115, 78, 225);
-  border: 1px solid rgb(115, 78, 225);
-  border-radius: 1000px;
-  font-family: "inter", serif;
-  text-transform: uppercase;
-  color: rgb(243, 243, 243);
+  display: inline-block;
   text-align: center;
+  padding: 1em 2em;
+  font-weight: 700;
+  background-color: #E1E1E1;
+  border: 1px solid rgb(17, 17, 17);
+  border-radius: 8px;
+  font-family: "inter", serif;
+  text-transform: capitalize;
+  color: #001C64;
   text-decoration: none;
-  /* Supprime le soulignement */
   cursor: pointer;
   transition: 0.5s ease;
-  margin-bottom: 100px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5vh;
+  width: 200px;
 }
 .btn:hover {
-  background-color: rgba(115, 78, 225, 0.655);
-  border: 1px solid rgba(115, 78, 225, 0.655);
+  background-color: #001C64;
+  color: #E1E1E1;
+  border: 1px solid rgb(17, 17, 17);
+}
+
+.btnContactContainer {
+  text-align: center;
+}
+
+.strong {
+  font-weight: bolder;
+}
+
+textarea {
+  resize: none;
 }
 
 @keyframes opacity {
@@ -173,10 +182,11 @@ body .headerIndex .TopHeader {
 body .headerIndex .TopHeader .imgHeader {
   display: flex;
   justify-content: end;
-  height: 50%;
+  height: 40%;
+  width: 90%;
 }
 body .headerIndex .TopHeader .imgHeader #pp {
-  border-radius: 150px;
+  border-radius: 48px;
   transition: transform 0.5s ease-in-out;
   animation: opacity 1s ease 0s forwards;
   opacity: 0;
@@ -309,7 +319,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets .projetContainer1 .expProjet {
   font-family: "Montserrat", serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   text-align: left;
   font-size: 1rem;
   font-family: "Montserrat", serif;
@@ -363,7 +373,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets .projetContainer2 .expProjet {
   font-family: "Montserrat", serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   text-align: left;
   font-size: 1rem;
   font-family: "Montserrat", serif;
@@ -384,7 +394,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets .pProject {
   font-family: "Montserrat", serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   font-family: "Montserrat", serif;
   line-height: 2.5rem;
   max-width: 100%;
@@ -429,7 +439,7 @@ body .headerIndex .BottomHeader i {
 }
 .contact p {
   font-family: "Montserrat", serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255, 255, 255);
   font-family: "Montserrat", serif;
   line-height: 2.5rem;
   max-width: 100%;
@@ -444,164 +454,26 @@ body .headerIndex .BottomHeader i {
   }
 }
 
-body .cardContainer {
-  background: linear-gradient(85deg, rgba(11, 4, 4, 0.3647058824), rgb(115, 78, 225));
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  box-shadow: 0px 5px 32px 0 rgba(76, 17, 122, 0.463);
-  border-radius: 16px;
-  max-width: 80vw;
-  min-height: 85vh;
-  padding: 1%;
-  margin: 5vh auto;
-}
-body .cardContainer .cardLeft {
-  max-width: 80vw;
-}
-@media screen and (min-width: 720px) {
-  body .cardContainer .cardLeft {
-    max-width: 60vw;
-    margin: 0 auto;
-  }
-}
-body .cardContainer .cardLeft .topLeft {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  max-height: 100px;
-  margin: 3vh 30px 5vh;
-}
-@media screen and (min-width: 720px) {
-  body .cardContainer .cardLeft .topLeft {
-    margin: 3vh 30px 15vh;
-  }
-}
-body .cardContainer .cardLeft .topLeft .imgHeader {
-  display: flex;
-  height: 25%;
-}
-@media screen and (min-width: 720px) {
-  body .cardContainer .cardLeft .topLeft .imgHeader {
-    height: 35%;
-  }
-}
-body .cardContainer .cardLeft .topLeft .imgHeader #pp {
-  border-radius: 150px;
-  display: flex;
-  margin: 0 auto;
-}
-body .cardContainer .cardLeft .topLeft .txtHeader {
-  margin-top: 2vh;
-  font-family: "inter", serif;
-  font-weight: 800;
-  text-align: center;
-  color: rgb(243, 243, 243);
-  max-width: 100%;
-}
-body .cardContainer .cardLeft .topLeft .txtHeader h1 {
-  margin-bottom: 1rem;
-}
-body .cardContainer .cardLeft .bottomLeft {
-  max-width: 80vw;
-  font-family: "Montserrat", serif;
-}
-body .cardContainer .cardLeft .bottomLeft .txtInfos {
-  text-align: left;
-  max-width: 90%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  color: rgb(243, 243, 243);
-}
-body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
-  margin-bottom: 1vh;
-}
-body .cardContainer .cardLeft .bottomLeft .txtInfos p {
-  font-weight: 600;
-  text-align: right;
-  font-family: "Montserrat", serif;
-  color: rgba(255, 255, 255, 0.8);
-}
-body .cardContainer .cardLeft .bottomLeft .skillsAndInterests {
-  max-width: 90%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-}
-body .cardContainer .cardLeft .bottomLeft .skillsAndInterests h3 {
-  margin-bottom: 1rem;
-  color: rgb(243, 243, 243);
-}
-body .cardContainer .cardLeft .bottomLeft .skillsAndInterests li {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-body .cardContainer .cardLeft .bottomLeft .skillsAndInterests li ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.8);
-}
-@media screen and (min-width: 720px) {
-  body .cardContainer .cardRight {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-body .cardContainer .cardRight .infosForm {
-  display: grid;
-  grid-template-columns: 45% 45%;
-  justify-content: center;
-}
-body .cardContainer .cardRight .infosForm input {
-  text-align: left;
-  padding-left: 1rem;
-  max-width: 30vw;
-}
-body .cardContainer .cardRight h2 {
-  text-align: center;
-  font-family: "inter", serif;
-  color: rgb(243, 243, 243);
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-body .cardContainer .cardRight form input,
-body .cardContainer .cardRight form textarea {
-  display: block;
-  margin: 0 auto;
-  width: 85%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border-radius: 25px;
-  outline: none;
-  border: 2px solid rgb(115, 78, 225);
-  color: rgb(243, 243, 243);
-  font-family: "Montserrat", serif;
-}
-body .cardContainer .cardRight form input:focus,
-body .cardContainer .cardRight form textarea:focus {
-  border: 2px solid rgb(115, 78, 225);
-}
-body .cardContainer .cardRight form #message {
-  height: 100px;
-  color: rgb(17, 17, 17);
-}
-body .cardContainer .cardRight form .submitContainer {
-  width: 50%;
-  text-align: center;
-  margin: 0 auto;
-}
-
 footer {
   background-color: rgb(17, 17, 17);
   min-height: 10vh;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 footer .socialnetworks {
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   -moz-column-gap: 100px;
        column-gap: 100px;
+}
+@media screen and (max-width: 720px) {
+  footer .socialnetworks {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
 }
 footer .socialnetworks i {
   font-size: 1.3rem;
@@ -609,4 +481,599 @@ footer .socialnetworks i {
 footer a,
 footer a:visited {
   color: rgb(243, 243, 243);
+}
+
+@media screen and (min-width: 1101px) {
+  body .cardContainer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #515151;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0);
+    border-radius: 16px;
+    max-width: 85vw;
+    margin: 5vh auto 5vh;
+    min-height: 80vh;
+  }
+  body .cardContainer .cardLeft {
+    display: grid;
+    grid-template-rows: 60% 40%;
+  }
+  body .cardContainer .cardLeft .topLeft {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader #pp {
+    border-radius: 8px;
+    max-height: 200px;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader {
+    display: grid;
+    grid-template-rows: 35% 65%;
+    align-items: center;
+    font-family: "Montserrat", serif;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    margin-top: 5vh;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
+    text-align: left;
+    font-size: 1.5rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom {
+    margin-top: -13vh;
+    font-size: 1rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul li {
+    display: flex;
+    gap: 5%;
+  }
+  body .cardContainer .cardLeft .bottomLeft {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+  }
+  body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 1rem 0 3rem;
+    font-size: 1.5rem;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto 5vh;
+  }
+  body .cardRight {
+    display: grid;
+    margin: auto 0 auto;
+    grid-template-rows: 30% 70%;
+    height: 80%;
+  }
+  body h2 {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 700;
+    margin: 0 auto 0;
+    font-size: 1.8rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+  }
+  form {
+    margin: auto;
+  }
+  form .infosForm {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+  }
+  form input,
+  form textarea {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+    font-family: "Montserrat", serif;
+  }
+  form input:focus,
+  form textarea:focus {
+    border: 1px solid rgb(0, 0, 0);
+  }
+  form #message {
+    height: 200px;
+  }
+  form .actionForm input[type=submit].btn-submit {
+    all: unset;
+    /* Supprimer tous les styles par défaut */
+    display: block;
+    margin: 5% auto;
+    padding: 1em 2em;
+    font-weight: 700;
+    background-color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 8px;
+    font-family: "inter", serif;
+    text-transform: capitalize;
+    color: #001C64;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s ease;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  }
+  form .actionForm input[type=submit].btn-submit:hover {
+    background-color: #001C64;
+    color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+  }
+}
+@media screen and (min-width: 851px) and (max-width: 1100px) {
+  body .cardContainer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #515151;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0);
+    border-radius: 16px;
+    max-width: 85vw;
+    margin: 5vh auto 5vh;
+    min-height: 80vh;
+  }
+  body .cardContainer .cardLeft {
+    display: grid;
+    grid-template-rows: 60% 40%;
+  }
+  body .cardContainer .cardLeft .topLeft {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader #pp {
+    border-radius: 8px;
+    max-height: 200px;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader {
+    display: grid;
+    grid-template-rows: 35% 65%;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", serif;
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    margin-top: 3vh;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
+    text-align: left;
+    font-size: 1rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop h1 {
+    font-weight: 600;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom {
+    margin-top: -13vh;
+  }
+  body .cardContainer .cardLeft .bottomLeft {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+  }
+  body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 1rem 0 3rem;
+    font-size: 1rem;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto 5vh;
+    font-weight: 500;
+  }
+  body .cardRight {
+    display: grid;
+    margin: auto;
+    grid-template-rows: 30% 70%;
+    height: 80%;
+  }
+  body h2 {
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 0 auto 0;
+    font-size: 1.5rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+  }
+  form input,
+  form textarea {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+    font-family: "Montserrat", serif;
+  }
+  form input:focus,
+  form textarea:focus {
+    border: 1px solid rgb(0, 0, 0);
+  }
+  form #message {
+    height: 100px;
+    margin-bottom: 5vh;
+  }
+  form .actionForm input[type=submit].btn-submit {
+    all: unset;
+    /* Supprimer tous les styles par défaut */
+    display: block;
+    margin: 5% auto;
+    padding: 1em 2em;
+    font-weight: 700;
+    background-color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 8px;
+    font-family: "inter", serif;
+    text-transform: capitalize;
+    color: #001C64;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s ease;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  }
+  form .actionForm input[type=submit].btn-submit:hover {
+    background-color: #001C64;
+    color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 850px) {
+  body .cardContainer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin: 5vh auto;
+    max-width: 90vw;
+    background-color: #515151;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0);
+    border-radius: 16px;
+  }
+  body .cardContainer .cardLeft {
+    padding: 5%;
+    margin-bottom: 3%;
+  }
+  body .cardContainer .cardLeft .topLeft {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader #pp {
+    border-radius: 8px;
+    max-height: 200px;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    row-gap: 2rem;
+    margin: auto auto auto;
+    font-family: "Montserrat", serif;
+    color: rgb(255, 255, 255);
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
+    text-align: center;
+    line-height: 1.5rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom {
+    min-height: 100%;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul {
+    min-width: 250px;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul li {
+    display: flex;
+    gap: 5%;
+    font-size: 0.65rem;
+    margin: 0 auto;
+  }
+  body .cardContainer .cardLeft .bottomLeft {
+    text-align: center;
+  }
+  body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 1rem 0 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  body .cardRight {
+    display: grid;
+    margin: auto 0 auto;
+    grid-template-rows: 15% 85%;
+    max-height: 50vh;
+  }
+  body .cardRight h2 {
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 0 auto 0;
+    font-size: 1.5rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+    margin-bottom: 10vh;
+  }
+  body form .infosForm {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+  }
+  body form input,
+  body form textarea {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+    font-family: "Montserrat", serif;
+  }
+  body form input:focus,
+  body form textarea:focus {
+    border: 1px solid rgb(0, 0, 0);
+  }
+  body form #message {
+    height: 100px;
+  }
+  body form .actionForm {
+    text-align: center;
+    margin-bottom: -10vh;
+  }
+  body form .actionForm input[type=submit].btn-submit {
+    all: unset;
+    /* Supprimer tous les styles par défaut */
+    display: block;
+    margin: 5% auto;
+    padding: 1em 2em;
+    font-weight: 700;
+    background-color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 8px;
+    font-family: "inter", serif;
+    text-transform: capitalize;
+    color: #001C64;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s ease;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  }
+  body form .actionForm input[type=submit].btn-submit:hover {
+    background-color: #001C64;
+    color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+  }
+}
+@media screen and (max-width: 500px) {
+  body .cardContainer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin: 5vh auto;
+    max-width: 90vw;
+    background-color: #515151;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0);
+    border-radius: 16px;
+  }
+  body .cardContainer .cardLeft {
+    margin-bottom: 3%;
+  }
+  body .cardContainer .cardLeft .topLeft {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader {
+    display: flex;
+    margin-top: 5vh;
+    align-items: center;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader #pp {
+    border-radius: 8px;
+    max-height: 20vh;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    row-gap: 1rem;
+    margin: auto auto auto;
+    font-family: "Montserrat", serif;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom {
+    min-height: 100%;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul {
+    min-width: 250px;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul li {
+    font-size: 0.65rem;
+  }
+  body .cardContainer .cardLeft .bottomLeft {
+    text-align: center;
+  }
+  body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 1rem auto 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  body .cardRight {
+    display: grid;
+    margin: auto 0 auto;
+    grid-template-rows: 15% 85%;
+    max-height: 50vh;
+  }
+  body .cardRight h2 {
+    font-family: "Montserrat", serif;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 0 auto 0;
+    font-size: 1.5rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+    margin-bottom: 10vh;
+  }
+  body form .infosForm {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  body form input,
+  body form textarea {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+    font-family: "Montserrat", serif;
+  }
+  body form input:focus,
+  body form textarea:focus {
+    border: 1px solid rgb(0, 0, 0);
+  }
+  body form #message {
+    height: 100px;
+  }
+  body form .actionForm {
+    text-align: center;
+    margin-bottom: -10vh;
+  }
+  body form .actionForm input[type=submit].btn-submit {
+    all: unset;
+    /* Supprimer tous les styles par défaut */
+    display: block;
+    margin: 5% auto;
+    padding: 1em 2em;
+    font-weight: 700;
+    background-color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 8px;
+    font-family: "inter", serif;
+    text-transform: capitalize;
+    color: #001C64;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s ease;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  }
+  body form .actionForm input[type=submit].btn-submit:hover {
+    background-color: #001C64;
+    color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+  }
 }/*# sourceMappingURL=index.css.map */
