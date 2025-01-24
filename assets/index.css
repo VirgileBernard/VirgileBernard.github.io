@@ -19,7 +19,7 @@ li {
 a,
 .aTxt {
   text-decoration: none;
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
 }
 
 body {
@@ -27,11 +27,12 @@ body {
 }
 
 header {
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
 }
 
 nav {
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
+  border-radius: 8px;
 }
 
 .navHeader {
@@ -43,16 +44,18 @@ nav {
   border-radius: 8px;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.3);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
 .navHeader a {
   position: relative;
   display: inline-block;
   font-size: 1em;
-  font-weight: 500;
-  color: rgb(243, 243, 243);
+  font-weight: 600;
+  color: rgba(243, 243, 243, 0.821);
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -213,7 +216,7 @@ body .headerIndex .BottomHeader p {
   line-height: 2.5rem;
 }
 body .headerIndex .BottomHeader span {
-  border: 2px solid rgb(243, 243, 243);
+  border: 2px solid rgba(243, 243, 243, 0.821);
   border-radius: 50px;
   height: 80px;
   width: 80px;
@@ -226,7 +229,7 @@ body .headerIndex .BottomHeader span {
   opacity: 0;
 }
 body .headerIndex .BottomHeader i {
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
 }
 
 #myProjects::before {
@@ -256,7 +259,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets h2 {
   font-family: "Montserrat", serif;
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
@@ -319,7 +322,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets .projetContainer1 .expProjet {
   font-family: "Montserrat", serif;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   font-size: 1rem;
   font-family: "Montserrat", serif;
@@ -373,7 +376,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets .projetContainer2 .expProjet {
   font-family: "Montserrat", serif;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
   font-size: 1rem;
   font-family: "Montserrat", serif;
@@ -394,7 +397,7 @@ body .headerIndex .BottomHeader i {
 }
 .mesProjets .pProject {
   font-family: "Montserrat", serif;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Montserrat", serif;
   line-height: 2.5rem;
   max-width: 100%;
@@ -428,7 +431,7 @@ body .headerIndex .BottomHeader i {
 }
 .contact h2 {
   font-family: "Montserrat", serif;
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
@@ -439,7 +442,7 @@ body .headerIndex .BottomHeader i {
 }
 .contact p {
   font-family: "Montserrat", serif;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.9);
   font-family: "Montserrat", serif;
   line-height: 2.5rem;
   max-width: 100%;
@@ -480,19 +483,22 @@ footer .socialnetworks i {
 }
 footer a,
 footer a:visited {
-  color: rgb(243, 243, 243);
+  color: rgba(243, 243, 243, 0.821);
 }
 
 @media screen and (min-width: 1101px) {
   body .cardContainer {
     display: grid;
     grid-template-columns: 60% 40%;
-    background-color: #515151;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0);
     border-radius: 16px;
     max-width: 85vw;
     margin: 5vh auto 5vh;
     min-height: 80vh;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   }
   body .cardContainer .cardLeft {
     display: grid;
@@ -516,7 +522,7 @@ footer a:visited {
     grid-template-rows: 35% 65%;
     align-items: center;
     font-family: "Montserrat", serif;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
     margin-top: 5vh;
   }
@@ -539,7 +545,7 @@ footer a:visited {
   }
   body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -566,7 +572,7 @@ footer a:visited {
     display: flex;
     align-items: center;
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -639,12 +645,15 @@ footer a:visited {
   body .cardContainer {
     display: grid;
     grid-template-columns: 60% 40%;
-    background-color: #515151;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0);
     border-radius: 16px;
     max-width: 85vw;
     margin: 5vh auto 5vh;
     min-height: 80vh;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   }
   body .cardContainer .cardLeft {
     display: grid;
@@ -669,7 +678,7 @@ footer a:visited {
     align-items: center;
     justify-content: center;
     font-family: "Montserrat", serif;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.8rem;
     margin-top: 3vh;
   }
@@ -690,7 +699,7 @@ footer a:visited {
   }
   body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -718,7 +727,7 @@ footer a:visited {
     display: flex;
     align-items: center;
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -786,9 +795,12 @@ footer a:visited {
     grid-template-rows: 50% 50%;
     margin: 5vh auto;
     max-width: 90vw;
-    background-color: #515151;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0);
     border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
   }
   body .cardContainer .cardLeft {
     padding: 5%;
@@ -813,7 +825,7 @@ footer a:visited {
     row-gap: 2rem;
     margin: auto auto auto;
     font-family: "Montserrat", serif;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.9);
   }
   body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
     text-align: center;
@@ -836,7 +848,7 @@ footer a:visited {
   }
   body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -859,7 +871,7 @@ footer a:visited {
   }
   body .cardRight h2 {
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -936,8 +948,11 @@ footer a:visited {
     grid-template-rows: 50% 50%;
     margin: 5vh auto;
     max-width: 90vw;
-    background-color: #515151;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
     border-radius: 16px;
   }
   body .cardContainer .cardLeft {
@@ -963,7 +978,7 @@ footer a:visited {
     row-gap: 1rem;
     margin: auto auto auto;
     font-family: "Montserrat", serif;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
   }
   body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
@@ -984,7 +999,7 @@ footer a:visited {
   }
   body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;
@@ -1007,7 +1022,7 @@ footer a:visited {
   }
   body .cardRight h2 {
     font-family: "Montserrat", serif;
-    color: rgb(243, 243, 243);
+    color: rgba(243, 243, 243, 0.821);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 600;

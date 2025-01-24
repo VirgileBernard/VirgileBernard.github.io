@@ -5,12 +5,16 @@
         .cardContainer {
             display: grid;
             grid-template-columns: 60% 40%;
-            background-color: #515151;
-            box-shadow: 0px 10px 10px rgb(0, 0, 0);
             border-radius: 16px;
             max-width: 85vw;
             margin: 5vh auto 5vh;
             min-height: 80vh;
+            ///effet glass
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur (10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 
             .cardLeft {
                 display: grid;
@@ -209,12 +213,17 @@
         .cardContainer {
             display: grid;
             grid-template-columns: 60% 40%;
-            background-color: #515151;
-            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+
             border-radius: 16px;
             max-width: 85vw;
             margin: 5vh auto 5vh;
             min-height: 80vh;
+            ///effet glass
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur (10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 
             .cardLeft {
                 display: grid;
@@ -415,9 +424,14 @@
             grid-template-rows: 50% 50%;
             margin: 5vh auto;
             max-width: 90vw;
-            background-color: #515151;
-            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+
             border-radius: 16px;
+            ///effet glass
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur (10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 
 
 
@@ -615,8 +629,12 @@
             grid-template-rows: 50% 50%;
             margin: 5vh auto;
             max-width: 90vw;
-            background-color: #515151;
-            box-shadow: 0px 10px 10px rgb(0, 0, 0);
+            ///effet glass
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur (10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
             border-radius: 16px;
 
 
