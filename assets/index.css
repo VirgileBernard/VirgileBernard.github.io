@@ -68,11 +68,6 @@ nav {
   height: 100%;
   width: 100%;
 }
-@media screen and (max-width: 420px) {
-  .navHeader a {
-    font-size: 0.8rem;
-  }
-}
 .navHeader span {
   position: absolute;
   top: 0;
@@ -991,7 +986,7 @@ footer a:visited {
   }
   body .cardContainer .cardLeft .topLeft .imgHeader {
     display: none;
-    margin-top: 5vh;
+    margin: auto auto auto;
     align-items: center;
   }
   body .cardContainer .cardLeft .topLeft .imgHeader #pp {
