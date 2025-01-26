@@ -50,6 +50,11 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
+@media screen and (max-width: 420px) {
+  .navHeader {
+    width: 90%;
+  }
+}
 .navHeader a {
   position: relative;
   display: inline-block;
@@ -72,6 +77,21 @@ nav {
   background-color: #001C64;
   border-radius: 8px;
   transition: 0.5s;
+}
+.navHeader a.active ~ span {
+  left: 33%;
+}
+.navHeader a.active ~ span {
+  transition: 0.5s ease;
+}
+.navHeader a:nth-child(1).active ~ span {
+  left: 0;
+}
+.navHeader a:nth-child(2).active ~ span {
+  left: 33%;
+}
+.navHeader a:nth-child(3).active ~ span {
+  left: 67%;
 }
 .navHeader a:nth-child(1):hover ~ span {
   left: 0;
@@ -789,7 +809,7 @@ footer a:visited {
     border: 1px solid rgb(17, 17, 17);
   }
 }
-@media screen and (min-width: 501px) and (max-width: 850px) {
+@media screen and (min-width: 500px) and (max-width: 850px) {
   body .cardContainer {
     display: grid;
     grid-template-rows: 50% 50%;
@@ -942,7 +962,7 @@ footer a:visited {
     border: 1px solid rgb(17, 17, 17);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 280px) and (max-width: 500px) {
   body .cardContainer {
     display: grid;
     grid-template-rows: 50% 50%;
@@ -964,13 +984,160 @@ footer a:visited {
     grid-template-columns: 30% 70%;
   }
   body .cardContainer .cardLeft .topLeft .imgHeader {
-    display: flex;
+    display: none;
     margin-top: 5vh;
     align-items: center;
   }
   body .cardContainer .cardLeft .topLeft .imgHeader #pp {
     border-radius: 8px;
     max-height: 20vh;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    row-gap: 1rem;
+    margin: auto auto auto;
+    font-family: "Montserrat", serif;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderTop {
+    text-align: left;
+    line-height: 1.5rem;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom {
+    min-height: 100%;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul {
+    min-width: 250px;
+  }
+  body .cardContainer .cardLeft .topLeft .txtHeader .txtHeaderBottom ul li {
+    font-size: 0.65rem;
+  }
+  body .cardContainer .cardLeft .bottomLeft {
+    text-align: center;
+  }
+  body .cardContainer .cardLeft .bottomLeft .txtInfos h2 {
+    font-family: "Montserrat", serif;
+    color: rgba(243, 243, 243, 0.821);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 1rem auto 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  body .cardRight {
+    display: grid;
+    margin: auto 0 auto;
+    grid-template-rows: 15% 85%;
+    max-height: 50vh;
+  }
+  body .cardRight h2 {
+    font-family: "Montserrat", serif;
+    color: rgba(243, 243, 243, 0.821);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 4rem 0 4rem;
+    font-size: 2rem;
+    font-family: "Montserrat", serif;
+    text-align: left;
+    letter-spacing: 0px;
+    text-transform: none;
+    font-weight: 500;
+    margin: 0 auto 0;
+    font-size: 1.5rem;
+    font-family: "Montserrat", serif;
+    text-align: center;
+    margin-bottom: 10vh;
+  }
+  body form .infosForm {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  body form input,
+  body form textarea {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgb(17, 17, 17);
+    color: rgb(17, 17, 17);
+    font-family: "Montserrat", serif;
+  }
+  body form input:focus,
+  body form textarea:focus {
+    border: 1px solid rgb(0, 0, 0);
+  }
+  body form #message {
+    height: 100px;
+  }
+  body form .actionForm {
+    text-align: center;
+    margin-bottom: -10vh;
+  }
+  body form .actionForm input[type=submit].btn-submit {
+    all: unset;
+    /* Supprimer tous les styles par défaut */
+    display: block;
+    margin: 5% auto;
+    padding: 1em 2em;
+    font-weight: 700;
+    background-color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+    border-radius: 8px;
+    font-family: "inter", serif;
+    text-transform: capitalize;
+    color: #001C64;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s ease;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  }
+  body form .actionForm input[type=submit].btn-submit:hover {
+    background-color: #001C64;
+    color: #E1E1E1;
+    border: 1px solid rgb(17, 17, 17);
+  }
+}
+@media screen and (max-width: 279px) {
+  body .cardContainer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin: 5vh auto;
+    max-width: 95vw;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+  }
+  body .cardContainer .cardLeft .topLeft {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader {
+    display: none;
+    margin-top: 5vh;
+    align-items: center;
+  }
+  body .cardContainer .cardLeft .topLeft .imgHeader #pp {
+    border-radius: 8px;
+    max-height: 10vh;
   }
   body .cardContainer .cardLeft .topLeft .txtHeader {
     display: grid;

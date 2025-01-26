@@ -96,6 +96,10 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
 
+    @media screen and (max-width: 420px) {
+        width: 90%;
+    }
+
     a {
         position: relative;
         display: inline-block;
@@ -111,6 +115,10 @@ nav {
         // Pour que le a prenne 100% de la taille de la case
         height: 100%;
         width: 100%;
+
+        @media screen and (max-width: 420px) {
+            font-size: 0.8rem;
+        }
     }
 
     span {
@@ -123,6 +131,27 @@ nav {
         border-radius: 8px;
         transition: .5s;
     }
+
+    a.active~span {
+        left: 33%; // Position du lien actif
+    }
+
+    a.active~span {
+        transition: 0.5s ease; // Pas d'animation au chargement
+    }
+
+    a:nth-child(1).active~span {
+        left: 0;
+    }
+
+    a:nth-child(2).active~span {
+        left: 33%;
+    }
+
+    a:nth-child(3).active~span {
+        left: 67%;
+    }
+
 
     a:nth-child(1):hover~span {
         left: 0;
@@ -137,6 +166,8 @@ nav {
     }
 
 }
+
+
 
 
 .btn {
