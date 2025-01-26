@@ -68,6 +68,11 @@ nav {
   height: 100%;
   width: 100%;
 }
+@media screen and (max-width: 420px) {
+  .navHeader a {
+    font-size: 0.8rem;
+  }
+}
 .navHeader span {
   position: absolute;
   top: 0;
@@ -193,7 +198,7 @@ textarea {
   }
 }
 body .headerIndex {
-  height: 100vh;
+  max-height: 100vh;
   text-transform: capitalize;
 }
 body .headerIndex .TopHeader {
@@ -229,6 +234,7 @@ body .headerIndex .BottomHeader {
   font-size: 2rem;
   font-family: "Montserrat", serif;
   text-align: center;
+  margin-bottom: -25vh;
 }
 body .headerIndex .BottomHeader p {
   opacity: 0;
@@ -263,7 +269,7 @@ body .headerIndex .BottomHeader i {
 
 .mesProjets {
   width: 65vw;
-  margin: 0 auto;
+  margin: 0 auto 0;
 }
 @media screen and (max-width: 720px) {
   .mesProjets {
